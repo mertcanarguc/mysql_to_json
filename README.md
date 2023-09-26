@@ -11,6 +11,21 @@ This tool allows you to convert the results of a given MySQL query into a JSON f
 pip install mysql-connector-python
 ```
 
+## Configuration
+
+Before using the tool, you need to update the database configuration details in the script. Open `index.py` and locate the following section:
+
+```python
+config = {
+    'user': 'root',
+    'password': '',
+    'host': '127.0.0.1',
+    'database': 'example',
+}
+```
+
+Replace `'root'`, `''`, `'127.0.0.1'`, and `'example'` with your MySQL database user, password, host, and database name respectively.
+
 ## Usage
 
 1. Run the `index.py` file:
@@ -28,4 +43,3 @@ python index.py
 - Saves SQL query results in JSON format.
 - Automatically converts special data types like date and time.
 - Saves the results in a readable format (indented).
-
